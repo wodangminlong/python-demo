@@ -4,24 +4,57 @@ engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 
 text = '''
-今天我，寒夜里看雪飘过
-怀着冷却了的心窝漂远方
-风雨里追赶，雾里分不清影踪
-天空海阔你与我
-可会变（谁没在变）
-多少次，迎着冷眼与嘲笑
-从没有放弃过心中的理想
-一刹那恍惚， 若有所失的感觉
-不知不觉已变淡
-心里爱（谁明白我）
-原谅我这一生不羁放纵爱自由
-也会怕有一天会跌倒
-背弃了理想 ，谁人都可以
-哪会怕有一天只你共我
+                                        You Have Only One Life
+
+    There are moments in life when you miss someone so much that you just want to pick them from your dreams and hug them for real! 
+    
+    Dream what you want to dream;go where you want to go;be what you want to be,
+    
+    because you have only one life and one chance to do all the things you want to do.
+
+    May you have enough happiness to make you sweet,enough trials to make you strong,
+    
+    enough sorrow to keep you human,enough hope to make you happy? 
+    
+    Always put yourself in others’shoes.If you feel that it hurts you,it probably hurts the other person, too.
+
+    The happiest of people don’t necessarily have the best of everything;
+    
+    they just make the most of everything that comes along their way.Happiness lies for those who cry,those who hurt, 
+    
+    those who have searched,and those who have tried,
+    
+    for only they can appreciate the importance of people who have touched their lives.Love begins with a smile,
+    
+    grows with a kiss and ends with a tear.The brightest future will always be based on a forgotten past, 
+    
+    you can’t go on well in lifeuntil you let go of your past failures and heartaches.
+
+    When you were born,you were crying and everyone around you was smiling.Live your life so that when you die,
+    
+    you're the one who is smiling and everyone around you is crying.
+
+    Please send this message to those people who mean something to you,
+    
+    to those who have touched your life in one way or another,
+    
+    to those who make you smile when you really need it,
+    
+    to those that make you see the brighter side of things when you are really down,
+    
+    to those who you want to let them know that you appreciate their friendship.And if you don’t, 
+    
+    don’t worry,
+    
+    nothing bad will happen to you,
+    
+    you will just miss out on the opportunity to brighten someone’s day with this message.
 '''
 
 if __name__ == '__main__':
-    voices = engine.setProperty('voice', voices[0].id)
+    voices = engine.setProperty('voice', voices[1].id)
+    rate = engine.getProperty('rate')
+    engine.setProperty('rate', rate - 80)
     engine.say(text)
     engine.runAndWait()
     engine.stop()
